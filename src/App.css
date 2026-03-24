@@ -1,0 +1,130 @@
+:root {
+
+    /* Colors */
+    --background-color: #fff;
+    --primary-color: #041e42;
+
+    /* Font Family */
+    --font-primary: 'Orbitron', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+
+}
+
+.login-page {
+  background-image: url('./assets/images/login/otis-login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.login-page > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* CORES */
+
+.otis-header {
+  background-color: var(--primary-color);
+}
+
+.bg-purple {
+  background-color: #9C27B0 !important;
+}
+
+.text-purple {
+  color: #9C27B0 !important;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* EFEITOS */
+.login-btn:hover {
+  transform: translateY(-4px);
+  border-color: #001F3F !important;
+}
+
+.login-btn:active {
+  transform: translateY(-2px);
+}
+
+.login-btn:hover .icon-wrapper {
+  transform: scale(1.1);
+}
+
+
+/* ESTILOS GLOBAIS - Talvez mover pra cima depois */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: var(--background-color);
+}
+
+main {
+  flex: 1;
+}
+
+th, td {
+  vertical-align: middle;
+}
+
+/* LAYOUT WRAPPER */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* HEADER E NAVEGAÇÃO */
+
+#user_image, #user_alert {
+  display: flex;
+}
+
+#config_option {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #user_image, #user_alert {
+    display: none;
+  }
+
+  #config_option {
+    display: block;
+  }
+}
+
